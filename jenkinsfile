@@ -33,7 +33,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 bat '''
-                    docker build -t %DOCKER_IMAGE%:latest .
+                    "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t %DOCKER_IMAGE%:latest .
                 '''
             }
         }
@@ -48,7 +48,7 @@ pipeline {
                     )
                 ]) {
                     bat '''
-                        docker login -u "%DOCKER_USERNAME%" -p "%DOCKER_PASSWORD%"
+                       "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" login -u "%DOCKER_USERNAME%" -p "%DOCKER_PASSWORD%"
                     '''
                 }
             }
@@ -57,7 +57,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 bat '''
-                    docker push %DOCKER_IMAGE%:latest
+                    "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" push %DOCKER_IMAGE%:latest
                 '''
             }
         }
