@@ -16,17 +16,17 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat '''
-                    python --version
-                    pip install -r requirements.txt
-                '''
+                    "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version
+                    "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt
+                 '''
             }
         }
 
         stage('Test') {
             steps {
                 bat '''
-                    python -m py_compile app.py
-                '''
+                    "C:\\Users\\JITENDER PARMAR\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m py_compile app.py
+                  '''
             }
         }
 
